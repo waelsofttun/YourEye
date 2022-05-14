@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">YourEye</string>
+    <string name="ocr_result_tip">your Text Here</string>
+    <string name="camera_error">This device doesn\'t support Camera2 API.</string>
+    <string name="action_settings1">Settings</string>
+    <string name="action_settings2">Contact</string>
+    <string name="action_settings3">About us</string>
+    <string name="action_settings4">Profile</string>
+</resources>

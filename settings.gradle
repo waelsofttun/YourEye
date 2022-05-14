@@ -1,0 +1,24 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+
+        jcenter() {
+            content {
+                includeModule("com.theartofdev.edmodo", "android-image-cropper")
+
+            }
+        }
+
+    }
+}
+
+
+rootProject.name = "YourEye"
+include ':app'
+
+include ':opencv'
+include()
+
+

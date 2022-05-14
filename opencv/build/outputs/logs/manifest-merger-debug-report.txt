@@ -1,0 +1,29 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\21620\AndroidStudioProjects\YourEye\opencv\AndroidManifest.xml:2:1-8:12
+INJECTED from C:\Users\21620\AndroidStudioProjects\YourEye\opencv\AndroidManifest.xml:2:1-8:12
+INJECTED from C:\Users\21620\AndroidStudioProjects\YourEye\opencv\AndroidManifest.xml:2:1-8:12
+	package
+		ADDED from C:\Users\21620\AndroidStudioProjects\YourEye\opencv\AndroidManifest.xml:3:7-27
+		INJECTED from C:\Users\21620\AndroidStudioProjects\YourEye\opencv\AndroidManifest.xml
+		INJECTED from C:\Users\21620\AndroidStudioProjects\YourEye\opencv\AndroidManifest.xml
+	android:versionName
+		ADDED from C:\Users\21620\AndroidStudioProjects\YourEye\opencv\AndroidManifest.xml:5:7-34
+	xmlns:android
+		ADDED from C:\Users\21620\AndroidStudioProjects\YourEye\opencv\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from C:\Users\21620\AndroidStudioProjects\YourEye\opencv\AndroidManifest.xml:4:7-33
+uses-sdk
+INJECTED from C:\Users\21620\AndroidStudioProjects\YourEye\opencv\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\21620\AndroidStudioProjects\YourEye\opencv\AndroidManifest.xml
+INJECTED from C:\Users\21620\AndroidStudioProjects\YourEye\opencv\AndroidManifest.xml
+INJECTED from C:\Users\21620\AndroidStudioProjects\YourEye\opencv\AndroidManifest.xml
+INJECTED from C:\Users\21620\AndroidStudioProjects\YourEye\opencv\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\21620\AndroidStudioProjects\YourEye\opencv\AndroidManifest.xml
+		ADDED from C:\Users\21620\AndroidStudioProjects\YourEye\opencv\AndroidManifest.xml
+		INJECTED from C:\Users\21620\AndroidStudioProjects\YourEye\opencv\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\21620\AndroidStudioProjects\YourEye\opencv\AndroidManifest.xml
+		ADDED from C:\Users\21620\AndroidStudioProjects\YourEye\opencv\AndroidManifest.xml
+		INJECTED from C:\Users\21620\AndroidStudioProjects\YourEye\opencv\AndroidManifest.xml

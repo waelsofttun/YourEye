@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    >
+
+    <org.opencv.android.JavaCameraView
+        android:id="@+id/activity_surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+    <SurfaceView
+        android:id="@+id/surface_roi_border"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#00ff00" />
+
+    <SurfaceView
+        android:id="@+id/surface_roi"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#00ff0000" />
+
+
+
+    <Button
+        android:id="@+id/btn_ocrstart"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:background="#7d010000"
+        android:onClick="onClickButton"
+        android:text="Start"
+        android:textColor="#ffffff"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/btn_finish"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="#7d010000"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:onClick="onClickButton"
+        android:text="←"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        />
+
+
+    <TextView
+        android:id="@+id/text_ocrresult"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:text="@string/ocr_result_tip"
+
+        android:textSize="20dp" />
+
+    <ImageView
+        android:id="@+id/image_capture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        />
+
+</RelativeLayout>

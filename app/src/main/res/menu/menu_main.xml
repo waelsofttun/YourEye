@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.youreye.MainActivity">
+    <item
+        android:id="@+id/editprofile"
+
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="@string/action_settings1"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/resetpass"
+
+        android:title="Reset password"
+         />
+    <item
+        android:id="@+id/logout"
+        android:title="Logout"
+         />
+
+
+</menu>

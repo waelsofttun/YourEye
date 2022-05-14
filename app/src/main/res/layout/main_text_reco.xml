@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/linearly">
+
+
+        <TextView
+            android:id="@+id/text_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your Text Here"
+            android:textColor="@color/black"
+            android:textSize="22sp">
+
+
+        </TextView>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_camera"
+            android:layout_width="204dp"
+            android:layout_height="wrap_content"
+            android:text="Camera" />
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_copy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="copy text" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
