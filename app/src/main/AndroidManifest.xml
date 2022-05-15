@@ -34,6 +34,17 @@
         <activity android:name=".Register">
 
         </activity>
+        <receiver
+            android:name=".AirplaneModeChangeReceiver"
+            android:enabled="true"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_AIRPLANE_MODE_CHANGED"/>
+
+            </intent-filter>
+
+        </receiver>
     </application>
 
 </manifest>

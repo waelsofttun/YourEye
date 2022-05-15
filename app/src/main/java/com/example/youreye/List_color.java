@@ -11,11 +11,11 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class List_color extends AppCompatActivity {
-
+    //declaration de la liste des couleur liste d'objet de class COLORNAME
     private ArrayList<Color_util.ColorName> colorList = new ArrayList<>();
-    //on aurait pu utiliser une autre structure de données comme  :
-    //private final List<String> wordsList = new ArrayList<>();
 
+
+    //declaration de recycleview et l'adapter
     private RecyclerView mRecyclerView;
     private ColorListAdapter mAdapter;
 
@@ -24,7 +24,7 @@ public class List_color extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_color);
 
-        //mettre contenu de la liste
+        //Mettre le contenu de la liste
         Color_util colorclass = new Color_util();
         colorList = colorclass.initColorList();
 

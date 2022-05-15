@@ -5,8 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.app.AlertDialog;
+import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -51,7 +54,11 @@ public class MainActivity extends AppCompatActivity {
     StorageReference storageReference;
 
     String phone,email,name;
+    //Pour broadcast RECIVER
+    private ComponentName mReceiverComponentName;
+    private PackageManager mPackageManager;
 
+    AirplaneModeChangeReceiver airplaneModeChangeReceiver = new AirplaneModeChangeReceiver();
 
 
 
@@ -63,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
         //Ajouter  ActionBar  avec setSupportActionBar
         Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(myToolbar);
+
+
 
 
 
@@ -255,7 +264,7 @@ public class MainActivity extends AppCompatActivity {
             }
                 return true;
             case R.id.logout:
-
+                //Logout
                 logout();
                 return true;
             default:
@@ -263,8 +272,19 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
-
+    //set Intent Filter on start Activity
+    @Override
+    protected void onStart() {
+        super.onStart();
+        IntentFilter filter = new IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED);
+        registerReceiver(airplaneModeChangeReceiver, filter);
+    }
+   //unregister Receiver on Airplane mode desactivated
+    @Override
+    protected void onStop() {
+        super.onStop();
+        unregisterReceiver(airplaneModeChangeReceiver);
+    }
     //logout et aller vers activity Login
     public void logout() {
         FirebaseAuth.getInstance().signOut();//logout

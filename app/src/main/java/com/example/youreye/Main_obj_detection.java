@@ -21,10 +21,10 @@ import java.io.IOException;
 import java.util.List;
 
 public class Main_obj_detection extends CameraActivity implements OnImageAvailableListener {
+    //declaration des con
     private static int MODEL_IMAGE_INPUT_SIZE = 300;
     private static String LOGGING_TAG = MainActivity.class.getName();
     private static float TEXT_SIZE_DIP = 10;
-
     private Integer sensorOrientation;
     private int previewWidth = 0;
     private int previewHeight = 0;

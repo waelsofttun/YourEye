@@ -17,22 +17,25 @@ import java.util.LinkedList;
 public class ColorListAdapter extends
         RecyclerView.Adapter<ColorListAdapter.WordViewHolder> {
 
-    //Préparer la structure qui contiendra les éléments de notre liste
+    //preparation de la liste
     private final ArrayList<Color_util.ColorName> mWordList;
-    //private final LayoutInflater mInflater;
 
 
+    //class wordviewHolder qui est le model qui decrit chaque ligne de la recycle view
     class WordViewHolder extends RecyclerView.ViewHolder
             implements View.OnClickListener {
-
+        //decalration de variable
         public final TextView wordItemView;
         final ColorListAdapter mAdapter;
 
-
+        //constructeur de wordviewholder
         public WordViewHolder(View itemView, ColorListAdapter adapter) {
             super(itemView);
+            //relié item au resource xml
             wordItemView = itemView.findViewById(R.id.word);
+            //passer l'adapter
             this.mAdapter = adapter;
+            //set listener de action onclick sur ligne de la recycleview
             itemView.setOnClickListener(this);
 
         }
@@ -40,19 +43,18 @@ public class ColorListAdapter extends
 
         @Override
         public void onClick(View view) {
+            //récupere position de la ligne selectionné
             int mPosition = getLayoutPosition();
-
+            //recupérer l'objet Color name a travers de sa position
             Color_util.ColorName element = mWordList.get(mPosition);
-
+            //modifier le couleur de background par le couleur correspandant au nom de couleur recupérer a partir de l'objet
             view.setBackgroundColor( Color.rgb(element.r,element.b,element.g));
-
-
         }
     }
 
     public ColorListAdapter(Context context, ArrayList<Color_util.ColorName> wordList) {
         this.mWordList = wordList;
-        //mInflater  = LayoutInflater.from(context);
+
 
     }
 
@@ -78,9 +80,9 @@ public class ColorListAdapter extends
 
         // Récupérer l'élément qui doit etre affiché et chargé dans le ViewHolder
         String mCurrent = mWordList.get(position).getName();
-        Log.i("color",mCurrent);
 
-        // Ajouter l'élément au ViewHolder
+
+        // Ajouter l'élément au ViewHolder et reinitalisé le couleur de background vers couleur blanc
         holder.itemView.setBackgroundColor(Color.rgb(255,255,255));
         holder.wordItemView.setText(mCurrent);
 

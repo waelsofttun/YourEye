@@ -1,6 +1,8 @@
 package com.example.youreye;
 
+import android.content.ComponentName;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -61,6 +63,7 @@ public class Register extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(),MainActivity.class));
             finish();
         }
+
 
         //listener de l'insciption
         mRegisterBtn.setOnClickListener(new View.OnClickListener() {
